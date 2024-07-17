@@ -1,0 +1,27 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name:</label>
+    <input id="name" formControlName="name" />
+    <div *ngIf="myForm.get('name')?.invalid && myForm.get('name')?.touched">
+      Name is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="email">Email :</label>
+    <input id="email" formControlName="email" />
+    <div *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched">
+      Enter valid email
+    </div>
+  </div>
+
+  <div>
+    <label for="city">City :</label>
+    <input id="city" formControlName="city" />
+    <div *ngIf="myForm.get('city')?.invalid && myForm.get('city')?.touched">
+      Please enter a valid City.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="myForm.invalid">Submit</button>
+</form>

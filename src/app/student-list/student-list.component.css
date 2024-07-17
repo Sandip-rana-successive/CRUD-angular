@@ -1,0 +1,9 @@
+table {
+  margin: auto auto;
+  min-width: 80% !important;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 15px
+}
